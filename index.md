@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to my workshop: Microservices Sample Reference based on .NET and Docker containers.
 
 You can use the [editor on GitHub](https://github.com/BadMadDev/workshop/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
