@@ -5,14 +5,16 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
 
-COPY ServicesAndWebApps.sln .
-COPY docker-compose.dcproj /src/
-COPY src/Services/Pricing/Pricing.Api/Pricing.Api.csproj src/Services/Pricing/Pricing.Api/
+COPY "ServicesAndWebApps.sln" "ServicesAndWebApps.sln"
 
-RUN dotnet restore ServicesAndWebApps.sln
+COPY "docker-compose.dcproj" "docker-compose.dcproj"
+
+COPY "Services/Pricing/Pricing.Api/Pricing.Api.csproj" "Services/Pricing/Pricing.Api/Pricing.Api.csproj"
+
+RUN dotnet restore "ServicesAndWebApps.sln"
 
 COPY . .
-WORKDIR /src/src/Services/Pricing/Pricing.Api
+WORKDIR /src/Services/Pricing/Pricing.Api
 RUN dotnet publish --no-restore -c Release -o /app
 
 FROM build AS publish

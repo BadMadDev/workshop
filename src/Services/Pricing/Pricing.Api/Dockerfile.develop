@@ -1,4 +1,4 @@
-﻿FROM microsoft/dotnet:3.1-sdk
+﻿FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster
 ARG BUILD_CONFIGURATION=Debug
 ENV ASPNETCORE_ENVIRONMENT=Development
 ENV DOTNET_USE_POLLING_FILE_WATCHER=true
@@ -6,7 +6,7 @@ EXPOSE 80
 
 WORKDIR /src
 
-COPY ["src/Services/Pricing/Priocing.Api/Pricing.Api.csproj", "src/Services/Pricing/Pricing.Api/"]
+COPY ["Services/Pricing/Priocing.Api/Pricing.Api.csproj", "Services/Pricing/Pricing.Api/"]
 
 RUN dotnet restore src/Services/Pricing/Pricing.Api/Pricing.Api.csproj -nowarn:msb3202,nu1503
 COPY . .
