@@ -1,5 +1,5 @@
 variables:
-    registryEndpoint: maddev77-registry
+    registryEndpoint: maddev77
 trigger:
   branches:
     include:
