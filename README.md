@@ -3,7 +3,7 @@ Microservices Sample Reference based on .NET (Core) and Docker containers
 
 ## Build Status
 
-Develop branch contains the latest "stable" code, and their images are tagged with `:develop` in our [Docker Hub](https://cloud.docker.com/maddev77/workshop/repository/list).
+Develop branch contains the latest "stable" code, and their images are tagged with `:develop` in our [Docker Hub](https://cloud.docker.com/u/maddev77/repository/list).
 
 ### Linux
 
