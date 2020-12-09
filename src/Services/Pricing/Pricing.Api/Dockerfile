@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
 
 COPY ServicesAndWebApps.sln .
-# COPY docker-compose.dcproj /src/
+COPY docker-compose.dcproj /src/
 COPY src/Services/Pricing/Pricing.Api/Pricing.Api.csproj src/Services/Pricing/Pricing.Api/
 
 RUN dotnet restore ServicesAndWebApps.sln
