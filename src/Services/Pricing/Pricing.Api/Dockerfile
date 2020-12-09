@@ -7,9 +7,11 @@ WORKDIR /src
 
 COPY "ServicesAndWebApps.sln" "ServicesAndWebApps.sln"
 
+COPY "Services/Pricing/Pricing.Api/Pricing.Api.csproj" "Services/Pricing/Pricing.Api/Pricing.Api.csproj"
+
 COPY "docker-compose.dcproj" "docker-compose.dcproj"
 
-COPY "Services/Pricing/Pricing.Api/Pricing.Api.csproj" "Services/Pricing/Pricing.Api/Pricing.Api.csproj"
+COPY "NuGet.config" "NuGet.config"
 
 RUN dotnet restore "ServicesAndWebApps.sln"
 
