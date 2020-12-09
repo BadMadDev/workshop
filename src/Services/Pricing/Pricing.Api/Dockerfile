@@ -7,11 +7,12 @@ WORKDIR /src
 
 COPY ServicesAndWebApps.sln .
 # COPY docker-compose.dcproj /src/
+COPY src/Services/Pricing/Pricing.Api/Pricing.Api.csproj src/Services/Pricing/Pricing.Api/
 
 RUN dotnet restore ServicesAndWebApps.sln
 
 COPY . .
-WORKDIR /src/Services/Pricing/Pricing.Api
+WORKDIR /src/src/Services/Pricing/Pricing.Api
 RUN dotnet publish --no-restore -c Release -o /app
 
 FROM build AS publish
