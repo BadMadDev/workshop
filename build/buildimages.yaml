@@ -52,14 +52,6 @@ jobs:
       projectName: ""
       dockerComposeFileArgs: |
         TAG=${{ variables['Build.SourceBranchName'] }} 
-  - task: CopyFiles@2
-    inputs:
-      sourceFolder: ${{ parameters.helmfrom }}
-      targetFolder: ${{ parameters.helmto }}
-  - task: PublishBuildArtifacts@1
-    inputs:
-      pathtoPublish: ${{ parameters.helmto }}
-      artifactName: helm
 - job: BuildWindows
   condition: ne('${{ variables['Build.Reason'] }}', 'PullRequest')
   pool:
