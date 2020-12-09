@@ -5,4 +5,4 @@ services:
     image: ${REGISTRY:-maddev77}/pricing.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Pricing/Pricing.Api/Dockerfile
+      dockerfile: Services/Pricing/Pricing.Api/Dockerfile
