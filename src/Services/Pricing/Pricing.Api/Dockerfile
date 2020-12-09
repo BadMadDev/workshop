@@ -11,7 +11,7 @@ COPY ServicesAndWebApps.sln .
 RUN dotnet restore ServicesAndWebApps.sln
 
 COPY . .
-WORKDIR /src/src/Services/Pricing/Pricing.Api
+WORKDIR /src/Services/Pricing/Pricing.Api
 RUN dotnet publish --no-restore -c Release -o /app
 
 FROM build AS publish
