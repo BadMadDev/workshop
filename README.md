@@ -1,4 +1,5 @@
-# docker workshop ![Image](./img/fam-wappen.png)
+![docker](./img/docker-logo.jpeg)
+# workshop ![Familienwappen](./img/fam-wappen.png)  
 Microservices Sample Reference based on .NET (Core) and Docker containers
 
 ## Build Status
