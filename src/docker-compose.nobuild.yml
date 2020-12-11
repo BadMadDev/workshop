@@ -1,8 +1,5 @@
-version: '3.8'
+version: '3.4'
 
 services:
   pricing.api:
     image: ${REGISTRY:-maddev77}/pricing.api:${PLATFORM:-linux}-${TAG:-latest}
-    build:
-      context: .
-      dockerfile: Services/Pricing/Pricing.Api/Dockerfile
